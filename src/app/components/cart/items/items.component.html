@@ -1,0 +1,31 @@
+<div class="row-space-top">
+    <div class="card bg-dark" *ngFor="let item of items" style="margin-bottom: 5px;">
+        <div class="card-body">
+            <div class="row">
+                <div class="col-3">
+                    <img src="http://127.0.0.1:8000{{item.product.image}}" alt="oops" class="img-fluid" width="150">
+                </div>
+                <div class="col-9">
+                    <div class="row align-items-center">
+                        <div class="col-8 text-warning">{{item.product.name}}</div>
+                        <div class="col-4 text-end">
+                            <button type="button" (click)="clickRemoveItem(item.product)" class="btn bg-transparent text-danger">
+                                x
+                            </button>
+                        </div>
+                    </div>
+                    <div class="row align-items-center" >
+                        <div class="col text-start">
+                            {{item.totalCost | currency:"EUR":"symbol"}}
+                        </div>
+                        <div class="col text-end">
+                            <button (click)="clickMinusQty(item.product)" class="btn btn-warning btn-sm marg-right">-</button>
+                            <span class="marg-right">{{item.qty}}</span>
+                            <button (click)="clickPlusQty(item.product)" class="btn btn-warning btn-sm">+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

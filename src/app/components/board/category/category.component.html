@@ -1,0 +1,12 @@
+<div class="row-space-top">
+    <div class="row">
+        <div class="col">
+            <ul class="nav nav-pills">
+                <li class="nav-item" *ngFor="let cat of categories; first as isFirst">
+                    <a #nav href="#" *ngIf="isFirst" (click)="$event.preventDefault(); clickNav(nav, cat.id)" class="nav-link active">{{cat.name}}</a>
+                    <a #nav href="#" *ngIf="!isFirst" (click)="$event.preventDefault(); clickNav(nav, cat.id)" class="nav-link">{{cat.name}}</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="row-space-top">
+    <div class="row">
+        <div class="col text-center">
+            <img src="http://127.0.0.1:8000{{product.image}}" alt="oops..." class="img-fluid">
+        </div>
+    </div>
+    <div class="row row-space-top">
+        <div class="col-6">
+            <h3 class="text-warning">{{product.name}}</h3>
+        </div>
+        <div class="col-6 text-end">{{product.price | currency:'EUR'}}</div>
+    </div>
+
+    <div class="row row-space-top">
+        <div class="col">
+            <p>{{product.ingredient}}</p>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col float-end">
+            <p>{{product.time}}</p>
+        </div>
+    </div>
+</div>
